@@ -69,6 +69,7 @@ async function main() {
             }
             )) {
                 for (const run of runs.data) {
+                    console.log("--> sha:", run.head_sha, ", run_number:", run.run_number, ", id:", run.id, ", status:", run.status)
                     if (commit && run.head_sha != commit) {
                         continue
                     }
